@@ -31,12 +31,14 @@ namespace Tests.Rigidbody_Factory.Scripts
         public void Release(IPoolReleaseData data)
         {
             _attractorPosition = transform.position;
+            _rigidbody.velocity = Vector3.zero;
+            transform.rotation = Quaternion.identity;
         }
 
         public void Init(IPool<CustomCube> ownerPool, IPoolInitializationData data)
         {
             _pool = ownerPool;
-            var initData = (CubePoolInitializeData)data;
+            var initData = (CubePoolInitializationData)data;
             
             _attractorPosition = initData.AttractorTransform.position;
             _force = initData.Force;

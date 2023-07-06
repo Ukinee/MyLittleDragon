@@ -3,9 +3,9 @@ using UnityEngine;
 
 namespace Tests.Rigidbody_Factory.Scripts
 {
-    public class CubePoolInitializeData : IPoolInitializationData
+    public class CubePoolInitializationData : IPoolInitializationData
     {
-        public CubePoolInitializeData(Transform attractorTransform, float force, float lifeTime)
+        public CubePoolInitializationData(Transform attractorTransform, float force, float lifeTime)
         {
             AttractorTransform = attractorTransform;
             Force = force;

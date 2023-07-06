@@ -1071,6 +1071,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CubeProducer
       objectReference: {fileID: 0}
+    - target: {fileID: 1951928796439759333, guid: d9fec3f720a2767479a248d90d857cab, type: 3}
+      propertyPath: _force
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 7651096768483504183, guid: d9fec3f720a2767479a248d90d857cab, type: 3}
       propertyPath: m_RootOrder
       value: -1

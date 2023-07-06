@@ -22,7 +22,7 @@ namespace Tests.Rigidbody_Factory.Scripts
 
         protected override IPoolInitializationData GetInitData()
         {
-            return new CubePoolInitializeData(_attractorTransform, _force, _lifeTime);
+            return new CubePoolInitializationData(_attractorTransform, _force, _lifeTime);
         }
     }
 }
