@@ -1,29 +1,38 @@
-using _scripts.Common.Utils;
 using UnityEngine;
 
 namespace Tests.Rigidbody_Factory.Scripts
 {
     public class CubeProducer : MonoBehaviour
     {
-        [SerializeField] private CubeFactory _cubeFactory;
+        [SerializeField] private CustomCube _cubePrefab;
+        [SerializeField] private Transform _poolRoot;
+        [SerializeField] private Transform _attractor;
+        [SerializeField] private float _force;
+        [SerializeField] private float _lifetime;
 
-        public void CreateCubeAtMyPosition()
+        private CubePool _pool;
+
+        private void Awake()
         {
-            if (_cubeFactory.IsDisabled)
-            {
-                Alert.Warning("Factory is disabled");
-                return;
-            }
-
-            CustomCube cube = _cubeFactory.GetObject();
-            
-            cube.transform.position = transform.position;
-            cube.transform.SetParent(transform);
+            // сюда могут пойти еще какие то зависимости, поэтому фабрика создается тут
+            // чтобы не прокидывать через пул
+            CubeFactory factory = new(_cubePrefab); 
+            _pool = new CubePool(factory, _poolRoot, 10);
+            _pool.Initialize();
         }
 
-        public void DisableFactory()
+        public void SpawnCube()
         {
-            _cubeFactory.Disable();
+            _pool.GetCube(
+                transform.position,
+                _attractor.position,
+                Random.Range(-_force, _force),
+                _lifetime);
+        }
+
+        public void ReleaseAll()
+        {
+            _pool.ReleaseAll();
         }
     }
 }

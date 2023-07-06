@@ -1,31 +1,53 @@
 using System.Collections.Generic;
-using _scripts.AbstractPool;
-using _scripts.Common.AbstractPool;
 using Tests.Rigidbody_Factory.Scripts;
 using UnityEngine;
 
 namespace Common.AbstractPool
 {
-    public abstract class AbstractPool<T> : MonoBehaviour, IPool<T> where T : MonoBehaviour, IPoolable<T>
+    public abstract class AbstractPool<T> : IPool<T> where T : MonoBehaviour, IPoolable<T>
     {
-        [SerializeField] private int _initialPoolSize;
-        [SerializeField] private T _poolablePrefab;
-
+        private readonly Transform _parent;
+        private readonly int _initialPoolSize;
+        private readonly AbstractFactory<T> _poolAbstractFactory;
+        
         private readonly Queue<T> _pooledObjects = new();
         private readonly List<T> _wanderingObjects = new();
 
-        public bool IsDisabled { get; private set; }
-
-        private void Awake()
+        protected AbstractPool(AbstractFactory<T> poolAbstractFactory, Transform parent, int initialPoolSize)
         {
-            Initialize();
+            _poolAbstractFactory = poolAbstractFactory;
+            _parent = parent;
+            _initialPoolSize = initialPoolSize;
         }
 
-        public T GetObject()
+        public void Initialize()
         {
-            if (IsDisabled)
-                return null;
+            for (var i = 0; i < _initialPoolSize; i++)
+                ExpandPool();
+        }
+        
+        public void ReleaseAll()
+        {
+            for (int i = _wanderingObjects.Count - 1; i >= 0; i--)
+            {
+                Release(_wanderingObjects[i]);
+            }
 
+            OnPoolDisable();
+        }
+
+        public void Release(T poolable)
+        {
+            poolable.Release();
+            poolable.transform.SetParent(_parent);
+            poolable.GameObject.SetActive(false);
+
+            _wanderingObjects.Remove(poolable);
+            _pooledObjects.Enqueue(poolable);
+        }
+
+        protected T GetObject()
+        {
             if (_pooledObjects.Count == 0)
                 ExpandPool();
 
@@ -33,49 +55,20 @@ namespace Common.AbstractPool
             _wanderingObjects.Add(poolable);
 
             poolable.GameObject.SetActive(true);
-            poolable.Init(this, GetInitData());
 
             return poolable;
         }
 
-        public void Release(T poolable)
-        {
-            poolable.Release(GetReleaseData());
-            poolable.transform.SetParent(transform);
-            poolable.GameObject.SetActive(false);
-
-            _wanderingObjects.Remove(poolable);
-            _pooledObjects.Enqueue(poolable);
-        }
-
-        public void Disable()
-        {
-            for (int i = _wanderingObjects.Count - 1; i >= 0; i--)
-            {
-                Release(_wanderingObjects[i]);
-            }
-
-            IsDisabled = true;
-            OnPoolDisable();
-        }
-
         protected virtual void OnPoolDisable()
         { }
-        
-        protected abstract IPoolReleaseData GetReleaseData();
-        protected abstract IPoolInitializationData GetInitData();
 
         private void ExpandPool()
         {
-            T poolable = Instantiate(_poolablePrefab, transform);
+            T poolable = _poolAbstractFactory.Construct();
+            poolable.GameObject.transform.SetParent(_parent);
+            poolable.SetPool(this);
             poolable.GameObject.SetActive(false);
             _pooledObjects.Enqueue(poolable);
-        }
-
-        private void Initialize()
-        {
-            for (var i = 0; i < _initialPoolSize; i++)
-                ExpandPool();
         }
     }
 }

@@ -2,14 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebaf10a3-7413-41de-8c09-25bef0dd2a73" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubePool.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubePool.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/AbstractFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/AbstractFactory.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyLittleDragon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyLittleDragon/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/CubeFactoryTest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/CubeFactoryTest.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/CubeProducer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/CubeProducer.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubeFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubeFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubePoolInitializeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubePoolInitializationData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubePoolInitializeData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubePoolInitializationData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubeFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubeFactory.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubePoolInitializationData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubePoolInitializationData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubeProducer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubeProducer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubeProducer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubeProducer.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CustomCube.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CustomCube.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/IPool.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/IPool.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/AbstractPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/AbstractPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/IPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/IPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/IPoolInitializationData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/IPoolInitializationData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/IPoolReleaseData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/IPoolReleaseData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/IPoolable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/IPoolable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +103,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688656802290</updated>
-      <workItem from="1688656805403" duration="10086000" />
+      <workItem from="1688656805403" duration="15621000" />
     </task>
     <servers />
   </component>

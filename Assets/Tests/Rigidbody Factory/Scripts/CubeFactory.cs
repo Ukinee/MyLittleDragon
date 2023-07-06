@@ -1,28 +1,23 @@
-using _scripts.AbstractPool;
-using _scripts.Common.AbstractPool;
 using Common.AbstractPool;
 using UnityEngine;
 
 namespace Tests.Rigidbody_Factory.Scripts
 {
-    public class CubeFactory : AbstractPool<CustomCube>
+    public class CubeFactory : AbstractFactory<CustomCube>
     {
-        [Space]
-        [Header("Cube Factory settings")]
-        [Space]
-        
-        [SerializeField] private Transform _attractorTransform;
-        [SerializeField] private float _force = 6;
-        [SerializeField] private float _lifeTime = 3;
-    
-        protected override IPoolReleaseData GetReleaseData()
-        {
-            return null;
-        }
+        private readonly CustomCube _cubePrefab;
 
-        protected override IPoolInitializationData GetInitData()
+        public CubeFactory(CustomCube cubePrefab)
         {
-            return new CubePoolInitializationData(_attractorTransform, _force, _lifeTime);
+            _cubePrefab = cubePrefab;
+        }
+        
+        public override CustomCube Construct()
+        {
+            CustomCube customCube = Object.Instantiate(_cubePrefab);
+            //Тут вызывается инициализация ключевыми зависимостями, общими для всех объектов пула
+            
+            return customCube;
         }
     }
 }

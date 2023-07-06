@@ -1,6 +1,4 @@
 using System.Collections;
-using _scripts.AbstractPool;
-using _scripts.Common.AbstractPool;
 using Common.AbstractPool;
 using UnityEngine;
 
@@ -28,23 +26,45 @@ namespace Tests.Rigidbody_Factory.Scripts
             _rigidbody.velocity += _force * Time.deltaTime * (_attractorPosition - transform.position);
         }
 
-        public void Release(IPoolReleaseData data)
+        /// <summary>
+        /// Данные только для этой жизни объекта
+        /// </summary>
+        /// <param name="attractorPosition"></param>
+        /// <param name="force"></param>
+        /// <param name="lifeTime"></param>
+        public void Init(Vector3 attractorPosition, float force, float lifeTime)
         {
-            _attractorPosition = transform.position;
-            _rigidbody.velocity = Vector3.zero;
-            transform.rotation = Quaternion.identity;
-        }
-
-        public void Init(IPool<CustomCube> ownerPool, IPoolInitializationData data)
-        {
-            _pool = ownerPool;
-            var initData = (CubePoolInitializationData)data;
-            
-            _attractorPosition = initData.AttractorTransform.position;
-            _force = initData.Force;
-            _lifetTime = initData.LifeTime;
+            _attractorPosition = attractorPosition;
+            _force = force;
+            _lifetTime = lifeTime;
             
             StartCoroutine(ReturnRoutine());
+        }
+
+        /// <summary>
+        /// Зависимости на всю жизнь объекта
+        /// </summary>
+        public void Construct()
+        {
+            
+        }
+
+        /// <summary>
+        /// Пул куда объект сам себя будет возвращать
+        /// </summary>
+        /// <param name="ownerPool"></param>
+        public void SetPool(IPool<CustomCube> ownerPool)
+        {
+            _pool = ownerPool;
+        }
+
+        /// <summary>
+        /// Что нажно сделать объекту, чтобы вернуться в изначальное состояние
+        /// </summary>
+        public void Release()
+        {
+            _rigidbody.velocity = Vector3.zero;
+            transform.rotation = Quaternion.identity;
         }
 
         private IEnumerator ReturnRoutine()

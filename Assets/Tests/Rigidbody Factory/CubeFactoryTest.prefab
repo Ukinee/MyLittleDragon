@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1973687975624585073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2815610491341864701}
+  m_Layer: 0
+  m_Name: Attractor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2815610491341864701
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973687975624585073}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.2432823, y: 5.2349725, z: -12.864594}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6092470201377500631}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2164724730588838335
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,10 +219,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1950021271936984557}
-        m_TargetAssemblyTypeName: Tests.Rigidbody_pool_factory.Scripts.CubeProducer,
-          Assembly-CSharp
-        m_MethodName: CreateCubeAtMyPosition
+      - m_Target: {fileID: 6110213253138939404}
+        m_TargetAssemblyTypeName: Tests.Rigidbody_Factory.Scripts.CubeProducer, Assembly-CSharp
+        m_MethodName: SpawnCube
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -393,7 +423,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Disable
+  m_text: Release all
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -771,7 +801,7 @@ GameObject:
   - component: {fileID: 9052159197217534926}
   - component: {fileID: 2910876491002466881}
   m_Layer: 5
-  m_Name: Clear
+  m_Name: ReleaseAll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -880,9 +910,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1950021271936984557}
+      - m_Target: {fileID: 6110213253138939404}
         m_TargetAssemblyTypeName: Tests.Rigidbody_Factory.Scripts.CubeProducer, Assembly-CSharp
-        m_MethodName: DisableFactory
+        m_MethodName: ReleaseAll
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -921,6 +951,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5853922375041675651}
+  - {fileID: 2815610491341864701}
   - {fileID: 8679932016996997337}
   - {fileID: 8157827859517722148}
   m_Father: {fileID: 0}
@@ -1071,10 +1102,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CubeProducer
       objectReference: {fileID: 0}
-    - target: {fileID: 1951928796439759333, guid: d9fec3f720a2767479a248d90d857cab, type: 3}
-      propertyPath: _force
-      value: 12
-      objectReference: {fileID: 0}
+    - target: {fileID: 5084741291506833122, guid: d9fec3f720a2767479a248d90d857cab, type: 3}
+      propertyPath: _attractor
+      value: 
+      objectReference: {fileID: 2815610491341864701}
     - target: {fileID: 7651096768483504183, guid: d9fec3f720a2767479a248d90d857cab, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -1124,15 +1155,15 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9fec3f720a2767479a248d90d857cab, type: 3}
---- !u!114 &1950021271936984557 stripped
+--- !u!114 &6110213253138939404 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 672348975646248195, guid: d9fec3f720a2767479a248d90d857cab, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5084741291506833122, guid: d9fec3f720a2767479a248d90d857cab, type: 3}
   m_PrefabInstance: {fileID: 1322782681405876462}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6110b170f69ed094792b0eb4085a0884, type: 3}
+  m_Script: {fileID: 11500000, guid: 67f9df05cab14167b55f1d8af49a5cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &8679932016996997337 stripped
