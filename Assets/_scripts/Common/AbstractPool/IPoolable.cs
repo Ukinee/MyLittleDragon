@@ -1,4 +1,3 @@
-using Tests.Rigidbody_Factory.Scripts;
 using UnityEngine;
 
 namespace Common.AbstractPool

@@ -96,12 +96,12 @@ GameObject:
   - component: {fileID: 6333413959878106446}
   - component: {fileID: 6314758202210047468}
   m_Layer: 0
-  m_Name: PoolableCube
+  m_Name: CustomCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5278889197741082070
 Transform:
   m_ObjectHideFlags: 0

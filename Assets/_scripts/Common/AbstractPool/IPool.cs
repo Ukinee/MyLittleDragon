@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace Tests.Rigidbody_Factory.Scripts
+namespace Common.AbstractPool
 {
-    public interface IPool<in T> where T : MonoBehaviour
+    public interface IPool<in T> where T : MonoBehaviour, IPoolable<T>
     {
         public void Release(T poolable);
     }

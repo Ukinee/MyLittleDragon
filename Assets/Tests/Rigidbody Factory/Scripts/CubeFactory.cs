@@ -1,23 +1,31 @@
 using Common.AbstractPool;
+using Common.AssetProvider;
 using UnityEngine;
 
 namespace Tests.Rigidbody_Factory.Scripts
 {
-    public class CubeFactory : AbstractFactory<CustomCube>
+    public class CustomCubeFactory : IFactory<CustomCube>
     {
-        private readonly CustomCube _cubePrefab;
+        private readonly Transform _parent;
+        private readonly IAssetProvider _assetProvider;
+        
+        private readonly float _lifetime;
 
-        public CubeFactory(CustomCube cubePrefab)
+        public CustomCubeFactory(Transform parent, IAssetProvider assetProvider, float lifetime)
         {
-            _cubePrefab = cubePrefab;
+            _parent = parent;
+            _assetProvider = assetProvider;
+            _lifetime = lifetime;
         }
         
-        public override CustomCube Construct()
+        public CustomCube Construct()
         {
-            CustomCube customCube = Object.Instantiate(_cubePrefab);
-            //Тут вызывается инициализация ключевыми зависимостями, общими для всех объектов пула
+            var cube = _assetProvider.GetAsset<CustomCube>(AssetPath.CustomCube);
+            cube.transform.SetParent(_parent);
             
-            return customCube;
+            cube.Construct(_lifetime);
+            
+            return cube;
         }
     }
 }

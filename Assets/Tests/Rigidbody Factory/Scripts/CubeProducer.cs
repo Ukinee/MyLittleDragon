@@ -1,33 +1,27 @@
+using Common.AssetProvider;
 using UnityEngine;
 
 namespace Tests.Rigidbody_Factory.Scripts
 {
     public class CubeProducer : MonoBehaviour
     {
-        [SerializeField] private CustomCube _cubePrefab;
         [SerializeField] private Transform _poolRoot;
         [SerializeField] private Transform _attractor;
-        [SerializeField] private float _force;
         [SerializeField] private float _lifetime;
+        [SerializeField] private float _force;
 
         private CubePool _pool;
-
+        
         private void Awake()
         {
-            // сюда могут пойти еще какие то зависимости, поэтому фабрика создается тут
-            // чтобы не прокидывать через пул
-            CubeFactory factory = new(_cubePrefab); 
-            _pool = new CubePool(factory, _poolRoot, 10);
-            _pool.Initialize();
+            IAssetProvider assetProvider = new AssetProvider();
+            
+            _pool = new CubePool(_poolRoot, assetProvider, _lifetime, 5);
         }
 
         public void SpawnCube()
         {
-            _pool.GetCube(
-                transform.position,
-                _attractor.position,
-                Random.Range(-_force, _force),
-                _lifetime);
+            _pool.GetCube(transform.position, _attractor.position, _force);
         }
 
         public void ReleaseAll()

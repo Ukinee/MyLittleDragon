@@ -13,7 +13,7 @@ namespace Tests.Rigidbody_Factory.Scripts
         private Vector3 _attractorPosition;
         private float _force = 1;
         private float _lifetTime = 1;
-        
+
         public GameObject GameObject => gameObject;
 
         private void Awake()
@@ -27,40 +27,29 @@ namespace Tests.Rigidbody_Factory.Scripts
         }
 
         /// <summary>
-        /// Данные только для этой жизни объекта
+        /// Критические зависимости
         /// </summary>
-        /// <param name="attractorPosition"></param>
-        /// <param name="force"></param>
-        /// <param name="lifeTime"></param>
-        public void Init(Vector3 attractorPosition, float force, float lifeTime)
+        public void Construct(float lifeTime)
+        {
+            _lifetTime = lifeTime;
+        }
+
+        /// <summary>
+        /// Инициализация объекта на одну "жизнь"
+        /// </summary>
+        public void Init(Vector3 attractorPosition, float force)
         {
             _attractorPosition = attractorPosition;
             _force = force;
-            _lifetTime = lifeTime;
-            
+
             StartCoroutine(ReturnRoutine());
         }
 
-        /// <summary>
-        /// Зависимости на всю жизнь объекта
-        /// </summary>
-        public void Construct()
-        {
-            
-        }
-
-        /// <summary>
-        /// Пул куда объект сам себя будет возвращать
-        /// </summary>
-        /// <param name="ownerPool"></param>
         public void SetPool(IPool<CustomCube> ownerPool)
         {
             _pool = ownerPool;
         }
 
-        /// <summary>
-        /// Что нажно сделать объекту, чтобы вернуться в изначальное состояние
-        /// </summary>
         public void Release()
         {
             _rigidbody.velocity = Vector3.zero;
@@ -70,6 +59,7 @@ namespace Tests.Rigidbody_Factory.Scripts
         private IEnumerator ReturnRoutine()
         {
             yield return new WaitForSeconds(_lifetTime);
+
             _pool.Release(this);
         }
     }
