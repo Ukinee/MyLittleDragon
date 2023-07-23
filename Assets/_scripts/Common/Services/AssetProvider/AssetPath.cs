@@ -1,4 +1,4 @@
-namespace Common.AssetProvider
+namespace Common.Services.AssetProvider
 {
     public class AssetPath
     {

@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
+using Common.Services.Factories.Interfaces;
+using Common.Services.Pools.Interfaces;
 using UnityEngine;
 
-namespace Common.AbstractPool
+namespace Common.Services.Pools
 {
     public class ExpandablePool<T> : IPool<T> where T : MonoBehaviour, IPoolable<T>
     {

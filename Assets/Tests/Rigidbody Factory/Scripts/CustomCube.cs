@@ -1,5 +1,5 @@
 using System.Collections;
-using Common.AbstractPool;
+using Common.Services.Pools.Interfaces;
 using UnityEngine;
 
 namespace Tests.Rigidbody_Factory.Scripts
@@ -12,7 +12,10 @@ namespace Tests.Rigidbody_Factory.Scripts
         private IPool<CustomCube> _pool;
         private Vector3 _attractorPosition;
         private float _force = 1;
-        private float _lifetTime = 1;
+        private float _lifetime = 1;
+
+        private float _elapsedTime;
+        private float _oscillateSpeed;
 
         public GameObject GameObject => gameObject;
 
@@ -23,7 +26,9 @@ namespace Tests.Rigidbody_Factory.Scripts
 
         private void Update()
         {
-            _rigidbody.velocity += _force * Time.deltaTime * (_attractorPosition - transform.position);
+            _elapsedTime += Time.deltaTime;
+
+            _rigidbody.velocity = _force * Mathf.Sin(_elapsedTime * _oscillateSpeed) * (_attractorPosition - transform.position);
         }
 
         /// <summary>
@@ -31,14 +36,15 @@ namespace Tests.Rigidbody_Factory.Scripts
         /// </summary>
         public void Construct(float lifeTime)
         {
-            _lifetTime = lifeTime;
+            _lifetime = lifeTime;
         }
 
         /// <summary>
         /// Инициализация объекта на одну "жизнь"
         /// </summary>
-        public void Init(Vector3 attractorPosition, float force)
+        public void Init(Vector3 attractorPosition, float force, float oscillateSpeed)
         {
+            _oscillateSpeed = oscillateSpeed;
             _attractorPosition = attractorPosition;
             _force = force;
 
@@ -58,7 +64,7 @@ namespace Tests.Rigidbody_Factory.Scripts
 
         private IEnumerator ReturnRoutine()
         {
-            yield return new WaitForSeconds(_lifetTime);
+            yield return new WaitForSeconds(_lifetime);
 
             _pool.Release(this);
         }

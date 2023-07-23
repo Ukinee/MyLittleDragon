@@ -2,27 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebaf10a3-7413-41de-8c09-25bef0dd2a73" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/IFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Common/AssetProvider.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Common/AssetProvider/AssetPath.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Common/AssetProvider/AssetPath.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Common/AssetProvider/AssetProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Common/AssetProvider/AssetProvider.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Common/AssetProvider/IAssetProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Common/AssetProvider/IAssetProvider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Common/Services.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Common/Services/AssetProvider/Interfaces.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Common/Services/Factories.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Common/Services/Factories/FactoryRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Common/Services/Factories/FactoryRepository.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Common/Services/Factories/Interfaces.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Common/Services/Factories/Interfaces/IFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Common/Services/Pools.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Common/Services/Pools/Interfaces.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Common/Services/Pools/Interfaces/IPool.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Common/Services/Pools/PoolRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_scripts/Common/Services/Pools/PoolRepository.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyLittleDragon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyLittleDragon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/PoolableCube.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/PoolableCube.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubeFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubeFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubePool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubePool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/Resources.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Resources.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/Resources/CustomCube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Resources/CustomCube.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/Resources/CustomCube.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Resources/CustomCube.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/CubeFactoryTest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Prefabs/CubeFactoryTest.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/CubeFactoryTest.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Prefabs/CubeFactoryTest.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/CubeProducer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Prefabs/CubeProducer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/CubeProducer.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Prefabs/CubeProducer.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubeFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CustomCubeFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubeFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CustomCubeFactory.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubePool.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubePool.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubeProducer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubeProducer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CustomCube.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CustomCube.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/AbstractFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/AbstractFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/IFactory.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/AbstractPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/ExpandablePool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/AbstractPool.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/ExpandablePool.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/IPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/IPool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/IPoolable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/IPoolable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/ExpandablePool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Common/Services/Pools/ExpandablePool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/ExpandablePool.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Common/Services/Pools/ExpandablePool.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/IFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/IFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Common/Services/Factories/Interfaces/IFactory.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/IPool.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/IPool.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Common/Services/Pools/Interfaces/IPool.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/IPoolable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Common/Services/Pools/Interfaces/IPoolable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/IPoolable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Common/Services/Pools/Interfaces/IPoolable.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AssetProvider.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Common/Services/AssetProvider.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AssetProvider/AssetPath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Common/Services/AssetProvider/AssetPath.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AssetProvider/AssetPath.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Common/Services/AssetProvider/AssetPath.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AssetProvider/AssetProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Common/Services/AssetProvider/AssetProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AssetProvider/AssetProvider.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Common/Services/AssetProvider/AssetProvider.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AssetProvider/IAssetProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Common/Services/AssetProvider/Interfaces/IAssetProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/Common/AssetProvider/IAssetProvider.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/Common/Services/AssetProvider/Interfaces/IAssetProvider.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +53,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6c9b376c3fca40b787e8c1a2133bf243171a00/a5/e853c51f/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Tests/Rigidbody Factory/Scripts/CubeProducer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_scripts/Common/AbstractPool/IFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_scripts/Common/Services/Factories/Interfaces/IFactory.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -105,7 +129,7 @@
       <updated>1688656802290</updated>
       <workItem from="1688656805403" duration="15621000" />
       <workItem from="1690109552072" duration="2989000" />
-      <workItem from="1690112572837" duration="381000" />
+      <workItem from="1690112572837" duration="6362000" />
     </task>
     <servers />
   </component>

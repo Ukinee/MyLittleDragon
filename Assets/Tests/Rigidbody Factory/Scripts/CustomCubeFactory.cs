@@ -1,5 +1,6 @@
-using Common.AbstractPool;
 using Common.AssetProvider;
+using Common.Services.AssetProvider;
+using Common.Services.Factories.Interfaces;
 using UnityEngine;
 
 namespace Tests.Rigidbody_Factory.Scripts

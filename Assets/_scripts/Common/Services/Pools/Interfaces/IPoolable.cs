@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace Common.AbstractPool
+namespace Common.Services.Pools.Interfaces
 {
-    public interface IPoolable<out T> where T : MonoBehaviour, IPoolable<T>
+    public interface IPoolable<T> where T : MonoBehaviour, IPoolable<T>
     {
         public GameObject GameObject { get; }
 

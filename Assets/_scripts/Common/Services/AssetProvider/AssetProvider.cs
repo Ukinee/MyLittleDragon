@@ -1,6 +1,7 @@
+using Common.AssetProvider;
 using UnityEngine;
 
-namespace Common.AssetProvider
+namespace Common.Services.AssetProvider
 {
     public class AssetProvider : IAssetProvider
     {

@@ -302,7 +302,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.11030814, y: -0, z: -0, w: 0.99389744}
-  m_LocalPosition: {x: 0, y: 3.48, z: -7.7}
+  m_LocalPosition: {x: 0, y: 5.87, z: -12.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -340,14 +340,6 @@ PrefabInstance:
     - target: {fileID: 36063545776814810, guid: b2048a9d7abfee942ac4f5394118c329, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2910876491002466881, guid: b2048a9d7abfee942ac4f5394118c329, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1774624430236968465}
-    - target: {fileID: 2910876491002466881, guid: b2048a9d7abfee942ac4f5394118c329, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ReleaseAll
       objectReference: {fileID: 0}
     - target: {fileID: 3843963716105690861, guid: b2048a9d7abfee942ac4f5394118c329, type: 3}
       propertyPath: m_AnchorMax.y
@@ -441,6 +433,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6110213253138939404, guid: b2048a9d7abfee942ac4f5394118c329, type: 3}
+      propertyPath: _force
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110213253138939404, guid: b2048a9d7abfee942ac4f5394118c329, type: 3}
+      propertyPath: _lifetime
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110213253138939404, guid: b2048a9d7abfee942ac4f5394118c329, type: 3}
+      propertyPath: _oscillateSpeed
+      value: 6.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7571474491465501750, guid: b2048a9d7abfee942ac4f5394118c329, type: 3}
       propertyPath: m_Name
       value: CubeFactoryTest
@@ -474,14 +478,3 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2048a9d7abfee942ac4f5394118c329, type: 3}
---- !u!114 &1774624430236968465 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6110213253138939404, guid: b2048a9d7abfee942ac4f5394118c329, type: 3}
-  m_PrefabInstance: {fileID: 1774624430236968464}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67f9df05cab14167b55f1d8af49a5cfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
